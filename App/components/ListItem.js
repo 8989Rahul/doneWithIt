@@ -10,6 +10,7 @@ function ListItem({
   subTitle,
   image,
   IconComponent,
+
   onPress,
   renderRightActions,
 }) {
