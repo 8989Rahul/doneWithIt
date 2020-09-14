@@ -4,11 +4,11 @@ import {MaterialCommunityIcons} from "@expo/vector-icons"
 import Colors from '../Config/Colors'
 
 
-const AppTextInput = ({icon}) => {
+const AppTextInput = ({icon,...otherProps}) => {
     return (
         <View style={styles.container} >
-           {icon&& <MaterialCommunityIcons name={icon} />}
-            <TextInput style={styles.textInput} />
+           {icon&& <MaterialCommunityIcons name={icon}  style={styles.icon} color={Colors.medium} size={20} />}
+            <TextInput style={styles.textInput}{...otherProps} />
         </View>
     )
 }
@@ -22,8 +22,13 @@ const styles = StyleSheet.create({
         width:"100%",
         marginVertical:10
     },
+    icon:{
+        marginRight:10
+    },
     textInput:{
-     fontSize:18
+     fontSize:18,
+     fontFamily :Platform.OS === "android" ? "Roboto" : "Avenir",
+     color:Colors.dark
     }
 })
 

@@ -1,11 +1,11 @@
 import React from "react";
 import AppTextInput from "./App/components/AppTextInput";
-// import ListingScreen from "./App/screens/ListingScreen";
+import Screen from "./App/components/Screen";
+import Colors from "./App/Config/Colors";
 
 export default function App() {
-  return <AppTextInput/>
+  return <Screen>
+    <AppTextInput placeholder="Username" icon="email"  />
+  </Screen>
 }
 
-// const styles = StyleSheet.create({
-//   container: { flex: 1, justifyContent: "center", alignItems: "center" },
-// });
