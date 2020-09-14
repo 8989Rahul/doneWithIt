@@ -1,8 +1,9 @@
 import React from "react";
-import ListingScreen from "./App/screens/ListingScreen";
+import AppTextInput from "./App/components/AppTextInput";
+// import ListingScreen from "./App/screens/ListingScreen";
 
 export default function App() {
-  return <ListingScreen />
+  return <AppTextInput/>
 }
 
 // const styles = StyleSheet.create({
