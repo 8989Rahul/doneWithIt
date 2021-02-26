@@ -1,11 +1,19 @@
 import React from "react";
-import AppTextInput from "./App/components/AppTextInput";
+import AppPicker from "./App/components/AppPicker";
 import Screen from "./App/components/Screen";
-import Colors from "./App/Config/Colors";
+
+const categories= [
+  {  label:"Furniture",value:1 },
+  {  label:"Clothing",value:2 },
+  {  label:"Cameras",value:3 },
+
+]
 
 export default function App() {
   return <Screen>
-    <AppTextInput placeholder="Username" icon="email"  />
+    <AppPicker items={categories} placeholder="Category" icon="apps"  />
+    <AppPicker placeholder="Email" icon="email"  />
+
   </Screen>
 }
 
